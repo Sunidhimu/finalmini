@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Online Canteen</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: fantasy, Helvetica, sans-serif;
+}
+.myslides{
+  
+  height: 600px;
+  width: 600px;
+}
+.about-section {
+  padding: 50px;
+  font-size: 20px;
+  font-family: fantasy;
+  text-align: center;
+  background-color:orange;
+  color:white;
+}
+.container{
+  display: inline-block;
+  object-position: center;
+  margin-left: 400px;
+  margin-top: 20px;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:darkorange;
+  color:white;
+  font-size: 20px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 70px;
+}
+
+.container .btn:hover {
+  background-color: darkgoldenrod;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:orange;
+  position: sticky;
+}
+
+.topnav a {
+  float: left;
+  color:white;
+  text-align: center;
+  padding: 16px 25px;
+  text-decoration: solid;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+ .btn{
+  height: 80px;
+  width:150px;
+  border-radius: 70px;
+  font-family: fantasy;
+  background-color:gold ;
+  color:darkorange;
+
+ }
+ .special-title{
+margin-top: none;
+ }
+ .South-Indian{
+  display: block;
+  margin-top: 50px;
+ }
+
+ .cards{
+  display: block;
+ }
+ .flip-card{
+  display:inline-block;
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  margin-top:50px;
+  margin-left:40px;
+ }
+ .flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+ }
+ .flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-card-front ,.flip-card-back{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front{
+  background-color: darkorchid;
+  color: black;
+}
+.flip-card-back{
+  background-color: mediumslateblue;
+  color:white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+  <div class="topnav">
+    <a href="#home-sec">Home</a>
+    <a href="#today">Today's Specials</a>
+    <a href="#s-i-d">South-Indian Delicacies</a>
+    <a href="#l" >Lunch</a>
+    <a href="#ch">Chinese</a>
+    <a href="#bv">Beverages</a>
+    <a href="#sn">Snacks</a>
+    <a href="#about-section">About</a>
+    <a href="cart.html">Feedback</a>
+    <a href="cartpng.html">Cart</a>
+    <a href="login.html">Login</a>
+  </div>
+  
+  <div class="container" >
+    <img class="mySlides" src="t/poster1.webp" >
+    <img class="mySlides" src="t/poster2.webp">
+    <img class="mySlides" src="t/poster3.webp">
+    <img class="mySlides" src="t/poster4.webp">
+    <img class="mySlides" src="t/poster7.webp">
+    <img class="mySlides" src="t/poster5.webp">
+    <button class="btn">Explore Moree!</button>
+  </div>
+  
+  
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+<section id="today">
+<div class="specials-title">
+
+<p>
+  <h1 style="color:darkorange; font: size 80px;text-align: center; font-family: fantasy;">
+  Today's Specials
+  </h1>
+</p>
+</div>
+</section>
+<div  class="cards">
+
+<div class="flip-card">
+<div class="flip-card-inner">
+  <div class="flip-card-front">
+    <img src="t/cheesepavbhaji.webp" alt="Cheese Pav Bhaji" style="width: 250px; height: 250px;" >
+    </div>
+    <div class="flip-card-back">
+      <h1>Cheese Pav Bhaji</h1>
+      <p> Preparation time:10mins</p>
+      <p>Rs.70/-</p>
+    </div>
+</div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="t/noodles.jpeg" alt="Noodles" style="width:250px; height: 250px;" >
+      </div>
+      <div class="flip-card-back">
+        <h1>Noodles</h1>
+        <p>Preparation time:10mins</p>
+        <p>Rs.40/-</p>
+      </div>
+  </div>
+</div>
+ 
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="t/jalebi.webp" alt="French Fries" style="width:250px; height: 250px;" >
+      </div>
+      <div class="flip-card-back">
+        <h1>Omlete</h1>
+        <p>Preparation time:10mins</p>
+        <p>Rs.50/-</p>
+      </div>
+  </div>
+</div>
+
+  
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="t/shan.webp" alt="Misal Pav" style="width: 250px; height: 250px;" >
+        </div>
+        <div class="flip-card-back">
+          <h1>Omlete</h1>
+          <p>Preparation time:10mins</p>
+          <p>Rs.50/-</p>
+        </div>
+    </div>
+    </div>
+
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="t/eggbiryani.webp" alt="Egg Biryani" style="width: 250px; height: 250px;" >
+          </div>
+          <div class="flip-card-back">
+            <h1>Omlete</h1>
+            <p> Preparation time:10mins</p>
+            <p>Rs.50/-</p>
+          </div>
+      </div>
+      </div>
+  </div>
+<section id="s-i-d">
+  <div class="South-Indian">
+    <p>
+      <h1 style="color:darkorange; font: size 80px;text-align: center; font-family: fantasy;">
+     South-Indian Delicacies
+      </h1>
+    </p>
+    </div>
+    </section>
+    <div  class="cards">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/idli.jpg" alt="Idli" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/masala.avif" alt=" Sada Dosa" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/dosa.jpeg" alt="Masala Dosa" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/medu.webp" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/idlivada.webp" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/uthapa.avif" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/payasam.webp" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p> Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/appam.avif" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/sambar.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="t/chutney.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Omlete</h1>
+              <p>Preparation time:10mins</p>
+              <p>Rs.50/-</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <section id="l">
+    <div class="South-Indian">
+      <p>
+        <h1 style="color:darkorange; font: size 80px;text-align: center; font-family: fantasy;">
+       Lunch
+        </h1>
+      </p>
+      </div>
+      </section>
+      <div  class="cards">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/tali1.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/tali2.avif" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/dal.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/chana rice.avif" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/aloo.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/panner.webp" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/naan.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/rice.avif" alt="Omlete" style="width:250px; height: 250px;" >
+            </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/papad.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/curd.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <section id="ch">
+    <div class="Chinese">
+      <p>
+        <h1 style="color:darkorange; font: size 80px;text-align: center; font-family: fantasy;">
+        Chinese Cusine
+        </h1>
+      </p>
+      </div>
+      </section>
+      <div  class="cards">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/noodles.jpeg" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/schewan.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/chillychicken.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/chickenmachunian.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/chillychicken.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/chillypaneer.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/noodles2.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/paneertikka.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/kungpao.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/chickenfi.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Chef's Specials</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>   
+      </div>
+      <section id="sn">
+      <div class="Snacks">
+        <p>
+          <h1 style="color:darkorange; font: size 80px;text-align: center; font-family: fantasy;">
+          Snacks
+          </h1>
+        </p>
+        </div>
+        </section>
+        <div  class="cards">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/vadapav.webp" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/samosa.jpeg" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/vada.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/dabeli.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/vada.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/dholka.webp" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/patra.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/omlete.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/nugeeta.avif" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="t/cutlet.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+                </div>
+                <div class="flip-card-back">
+                  <h1>Omlete</h1>
+                  <p> Chef's Specials</p>
+                  <p>Rs.50/-</p>
+                </div>
+            </div>
+          </div>   
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/dal wada.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/mirchifriters.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p> Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/poha.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/french.jpeg" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="t/usal pav.webp" alt="Omlete" style="width:250px; height: 250px;" >
+              </div>
+              <div class="flip-card-back">
+                <h1>Omlete</h1>
+                <p>Preparation time:10mins</p>
+                <p>Rs.50/-</p>
+              </div>
+          </div>
+        </div>
+        <section id="bv">
+        <div class="South-Indian">
+          <p>
+            <h1 style="color:darkorange; font: size 80px;text-align: center; font-family: fantasy;">
+           Beverages
+            </h1>
+          </p>
+          </div>
+          </section>
+          <div  class="cards">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/chai.avif" alt="Idli" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/fcoffee.avif" alt=" Sada Dosa" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/coff.avif" alt="Masala Dosa" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/gea.webp" alt="Omlete" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/lassi.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/milkshake.webp" alt="Omlete" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/bmilk.jpg" alt="Omlete" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p> Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/kesarmilk.webp" alt="Omlete" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/coke.webp" alt="Omlete" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="t/lemonade.avif" alt="Omlete" style="width:250px; height: 250px;" >
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Omlete</h1>
+                    <p>Preparation time:10mins</p>
+                    <p>Rs.50/-</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <section id="about-section">
+          <div class="about-section">
+            <h1 style="font-family:fantasy;">Fcrit Online Canteen Service</h1>
+            <p>Developed by Second Year Computer Engineering Students.</p>
+            <p>Sunidhi Munshi:1021211@comp.fcrit.ac.in</p>
+            <p>Anshilin Nadar:1021212@comp.fcrit.ac.in</p>
+            <p>Kevin Noronha:1021221@comp.fcrit.ac.in</p>
+            <p>Sumit Patil:1021226@comp.fcrit.ac.in</p>
+          </div>
+          </section>
+          
+  </body>
+</html>
